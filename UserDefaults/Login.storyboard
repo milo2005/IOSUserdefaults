@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="LyQ-Y5-RIL">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Login View Controller-->
+        <scene sceneID="HER-aH-f3D">
+            <objects>
+                <viewController id="LyQ-Y5-RIL" customClass="LoginViewController" customModule="UserDefaults" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="UxT-9R-h0X"/>
+                        <viewControllerLayoutGuide type="bottom" id="Ozn-0G-iyH"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="SO4-Rj-750">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Inicio de Sesion" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q0K-bt-Wmc">
+                                <rect key="frame" x="16" y="59" width="343" height="37"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="31"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SV4-JE-ios">
+                                <rect key="frame" x="16" y="123" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
+                            </textField>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="akC-ur-10Z">
+                                <rect key="frame" x="16" y="272" width="343" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="30a-Xr-lv2">
+                                        <rect key="frame" x="0.0" y="0.0" width="171.5" height="30"/>
+                                        <state key="normal" title="Registro"/>
+                                        <connections>
+                                            <segue destination="Iqi-dY-zQn" kind="show" id="3iZ-h8-KSf"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0VK-F2-KWY">
+                                        <rect key="frame" x="171.5" y="0.0" width="171.5" height="30"/>
+                                        <state key="normal" title="Entrar"/>
+                                        <connections>
+                                            <action selector="login:" destination="LyQ-Y5-RIL" eventType="touchUpInside" id="sgL-Ae-GdH"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Contraseña" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CeY-jC-nXy">
+                                <rect key="frame" x="16" y="181" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Q0K-bt-Wmc" firstAttribute="top" secondItem="UxT-9R-h0X" secondAttribute="bottom" constant="39" id="0la-f0-bZZ"/>
+                            <constraint firstItem="SV4-JE-ios" firstAttribute="leading" secondItem="SO4-Rj-750" secondAttribute="leadingMargin" id="3xa-mI-wga"/>
+                            <constraint firstItem="CeY-jC-nXy" firstAttribute="top" secondItem="SV4-JE-ios" secondAttribute="bottom" constant="28" id="OUS-2f-637"/>
+                            <constraint firstItem="CeY-jC-nXy" firstAttribute="trailing" secondItem="SO4-Rj-750" secondAttribute="trailingMargin" id="Rta-nA-wPk"/>
+                            <constraint firstItem="akC-ur-10Z" firstAttribute="leading" secondItem="SO4-Rj-750" secondAttribute="leadingMargin" id="TsB-U1-L52"/>
+                            <constraint firstItem="SV4-JE-ios" firstAttribute="trailing" secondItem="SO4-Rj-750" secondAttribute="trailingMargin" id="VUv-b7-QfV"/>
+                            <constraint firstItem="akC-ur-10Z" firstAttribute="top" secondItem="CeY-jC-nXy" secondAttribute="bottom" constant="61" id="WUf-kn-ISk"/>
+                            <constraint firstItem="Q0K-bt-Wmc" firstAttribute="leading" secondItem="SO4-Rj-750" secondAttribute="leadingMargin" id="n35-IU-5HC"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="akC-ur-10Z" secondAttribute="trailing" id="qUs-mI-OXN"/>
+                            <constraint firstItem="SV4-JE-ios" firstAttribute="top" secondItem="Q0K-bt-Wmc" secondAttribute="bottom" constant="27" id="sbR-y7-2Xa"/>
+                            <constraint firstItem="CeY-jC-nXy" firstAttribute="leading" secondItem="SO4-Rj-750" secondAttribute="leadingMargin" id="tdP-a9-URZ"/>
+                            <constraint firstItem="Q0K-bt-Wmc" firstAttribute="trailing" secondItem="SO4-Rj-750" secondAttribute="trailingMargin" id="y7s-LF-yy4"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <segue destination="thA-VR-NKU" kind="show" identifier="goToMain" id="zWx-uu-Va3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VeW-im-05u" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="218.40000000000001" y="197.45127436281859"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="ACR-EP-I2Q">
+            <objects>
+                <viewController id="Iqi-dY-zQn" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="57f-Cm-C3e"/>
+                        <viewControllerLayoutGuide type="bottom" id="g1l-S5-nKg"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="6Mf-dx-YtI">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Yy-RJ-XfH">
+                                <rect key="frame" x="16" y="28" width="46" height="30"/>
+                                <state key="normal" title="Atras"/>
+                                <connections>
+                                    <segue destination="FHq-LS-L5X" kind="unwind" unwindAction="backToLogin:" id="yZx-QM-VeV"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Registro" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HOY-AV-gam">
+                                <rect key="frame" x="16" y="77" width="343" height="43"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="31"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="HOY-AV-gam" firstAttribute="top" secondItem="6Yy-RJ-XfH" secondAttribute="bottom" constant="19" id="56M-Vk-yyB"/>
+                            <constraint firstItem="6Yy-RJ-XfH" firstAttribute="leading" secondItem="6Mf-dx-YtI" secondAttribute="leadingMargin" id="6de-mR-5Dz"/>
+                            <constraint firstItem="HOY-AV-gam" firstAttribute="leading" secondItem="6Mf-dx-YtI" secondAttribute="leadingMargin" id="M9w-mw-1H8"/>
+                            <constraint firstItem="HOY-AV-gam" firstAttribute="trailing" secondItem="6Mf-dx-YtI" secondAttribute="trailingMargin" id="MKt-cJ-a5Q"/>
+                            <constraint firstItem="6Yy-RJ-XfH" firstAttribute="top" secondItem="57f-Cm-C3e" secondAttribute="bottom" constant="8" id="Yap-E1-3WW"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dKU-nq-XqR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="FHq-LS-L5X" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="998" y="197"/>
+        </scene>
+        <!--Main-->
+        <scene sceneID="EdP-rE-WR0">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Main" id="thA-VR-NKU" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6iZ-Wa-GmY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="218" y="589"/>
+        </scene>
+    </scenes>
+</document>
